@@ -2,11 +2,11 @@
   "name": "ecarlate-rp",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd backend && node index.js",
-    "client": "cd frontend && npm start"
+    "start": "cd frontend && npm start"
   },
-  "devDependencies": {
-    "concurrently": "^8.0.0"
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "react-bootstrap": "^2.10.10",
+    "react-icons": "^5.5.0"
   }
 }
