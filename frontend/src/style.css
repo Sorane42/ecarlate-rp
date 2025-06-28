@@ -16,18 +16,26 @@ body {
   margin: auto;
 }
 
+/* Centrage horizontal de la navbar */
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
   background-color: black;
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
 }
 
+/* Container centré et éléments alignés verticalement */
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  width: 100%;
+  max-width: 1200px; /* Largeur max de la navbar */
+  padding: 0 32px;
   position: relative;
+  margin: 0 auto;
 }
 
 .navbar .nav-container li {
@@ -40,13 +48,18 @@ body {
   color: #0e2431;
   font-weight: 500;
   font-size: 1.2rem;
-  padding: 0.7rem;
+  padding-bottom: 0.7rem;
   color: white;
   transition: color 0.2s;
 }
 
-/* Ajoute cette règle pour désactiver l'effet sur le logo */
 .logo a::after {
+  display: none !important;
+  content: none !important;
+}
+
+.menu-items a .social-icon::after,
+.menu-items a:has(.social-icon)::after {
   display: none !important;
   content: none !important;
 }
@@ -73,7 +86,7 @@ body {
   display: block;
   height: 32px;
   width: 32px;
-  top: 20px;
+  top: 35px;
   right: 20px;
   z-index: 5;
   opacity: 0;
@@ -84,8 +97,8 @@ body {
   height: 26px;
   width: 32px;
   position: absolute;
-  top: 17px;
-  right: 20px;
+  top: 1.6rem;
+  right: 1.6rem;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -180,28 +193,43 @@ body {
   .navbar .menu-items {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #fff;
-    width: 200px;
-    height: calc(100vh - 60px);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 80px); /* prend tout sauf la navbar */
+    background: #000;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;      /* espace interne pour les liens */
     margin-left: 0;
     padding-left: 0;
+    z-index: 1000;
+    gap: 0.5rem;  /* espace entre les items */
   }
   .nav-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
   }
-  .nav-container .hamburger-lines {
-    display: flex;
+  .navbar .menu-items .social-icon {
+    font-size: 2rem;
+    margin: 0 0.5rem;
   }
-  .nav-container .checkbox {
-    display: block;
+  .nav-container .hamburger-lines .line {
+    background: white;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-items {
+    margin-left: 0;
+    gap: 1.2rem;
+  }
+
+  .logo img {
+    margin-top: 0.7rem !important;
   }
 }
 
@@ -213,26 +241,16 @@ body {
 }
 
 .logo img {
+  margin-top: 1rem;
   width: 60px !important;
   height: auto !important;
 }
 
 .menu-items {
+  text-transform: uppercase;
   display: flex;
   justify-content: right;
   align-items: center;
   margin-left: auto;
-  gap: 0.5rem; /* espace entre les items */
-}
-
-/* Responsive : conserve le comportement mobile existant */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .menu-items {
-    margin-left: 0;
-    gap: 1.2rem;
-  }
+  gap: 1.5rem; /* espace entre les items */
 }

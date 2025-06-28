@@ -26,17 +26,17 @@ const Navbar = () => (
           <li><a href="#">Partenaires</a></li>
           <li><a href="#">Autres</a></li>
           <li>
-              <a href="https://discord.gg/your-discord-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/jbsVZrPkNM" target="_blank" rel="noopener noreferrer">
               <FaDiscord className="social-icon" />
               </a>
           </li>
           <li>
-              <a href="https://www.tiktok.com/@your-tiktok-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@empire.ecarlate" target="_blank" rel="noopener noreferrer">
               <FaTiktok className="social-icon" />
               </a>
           </li>
           <li>
-              <a href="https://www.youtube.com/@your-youtube-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@EmpireRPEcarlate" target="_blank" rel="noopener noreferrer">
               <FaYoutube className="social-icon" />
               </a>
           </li>
