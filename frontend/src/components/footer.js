@@ -1,6 +1,6 @@
 import React from "react";
 import "../style.css";
-import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => (
   <footer className="footer">
@@ -10,11 +10,6 @@ const Footer = () => (
       </div>
       <ul className="footer-items">
         <li>
-          <a href="https://discord.gg/jbsVZrPkNM" target="_blank" rel="noopener noreferrer">
-            <FaDiscord className="social-icon" />
-          </a>
-        </li>
-        <li>
           <a href="https://www.tiktok.com/@empire.ecarlate" target="_blank" rel="noopener noreferrer">
             <FaTiktok className="social-icon" />
           </a>
@@ -22,6 +17,11 @@ const Footer = () => (
         <li>
           <a href="https://www.youtube.com/@EmpireRPEcarlate" target="_blank" rel="noopener noreferrer">
             <FaYoutube className="social-icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/empire_rp_ecarlate/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="social-icon" />
           </a>
         </li>
       </ul>
