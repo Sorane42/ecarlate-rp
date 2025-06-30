@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-
+import Footer from "./components/footer";
+import Home from './components/home';
 function App() {
    const [load, updateLoad] = useState(true);
 
@@ -15,10 +15,11 @@ function App() {
   }, []);
 
   return (
-        <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
-
-        {/* Sections */}
+        <Home />
+        <Home />
+        <Footer />
       </div>
   );
 }

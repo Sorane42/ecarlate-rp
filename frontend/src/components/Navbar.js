@@ -42,6 +42,7 @@ const Navbar = () => (
           </li>
         </ul>
       </div>
+      <hr className="navbar-hr" />
     </div>
   </nav>
 );
