@@ -4,6 +4,7 @@ import { FaDiscord, FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => (
   <footer className="footer">
+    <hr className="footer-hr"></hr>
     <div className="container footer-container">
       <div className="footer-logo">
         <span>Ecarlate RP</span>
