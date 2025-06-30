@@ -30,16 +30,6 @@ const Navbar = () => (
               <FaDiscord className="social-icon" />
               </a>
           </li>
-          <li>
-              <a href="https://www.tiktok.com/@empire.ecarlate" target="_blank" rel="noopener noreferrer">
-              <FaTiktok className="social-icon" />
-              </a>
-          </li>
-          <li>
-              <a href="https://www.youtube.com/@EmpireRPEcarlate" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="social-icon" />
-              </a>
-          </li>
         </ul>
       </div>
       <hr className="navbar-hr" />
