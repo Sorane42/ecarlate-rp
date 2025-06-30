@@ -8,7 +8,7 @@ import { FaYoutube } from "react-icons/fa";
 const Navbar = () => (
   <nav>
     <div className="navbar">
-      <div className="container nav-container">
+      <div className="nav-container">
         <input className="checkbox" type="checkbox" id="nav-toggle" />
         <label htmlFor="nav-toggle" className="hamburger-lines">
           <span className="line line1"></span>
@@ -26,9 +26,9 @@ const Navbar = () => (
           <li><a href="#">Partenaires</a></li>
           <li><a href="#">Autres</a></li>
           <li>
-              <a href="https://discord.gg/jbsVZrPkNM" target="_blank" rel="noopener noreferrer">
+            <a href="https://discord.gg/jbsVZrPkNM" target="_blank" rel="noopener noreferrer">
               <FaDiscord className="social-icon" />
-              </a>
+            </a>
           </li>
         </ul>
       </div>
