@@ -80,6 +80,13 @@ h1 {
   content: none !important;
 }
 
+.menu-items .social-icon:hover{
+  color: #fdfdfd;
+  filter: drop-shadow(0 0 6px #7289da);
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
 .navbar .nav-container a::after {
   content: "";
   position: absolute;
@@ -156,6 +163,7 @@ h1 {
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
+  margin-bottom: unset !important;
 }
 
 .navbar .menu-items li {
@@ -398,7 +406,10 @@ h1 {
 }
 
 .footer-items .social-icon:hover {
-  color: #4b4b4b;
+  color: #fdfdfd;
+  filter: drop-shadow(0 0 6px #7289da);
+  transform: scale(1.2);
+  transition: 0.2s;
 }
 
 .footer-hr {
@@ -500,7 +511,7 @@ h1 {
   justify-items: center;
 }
 
-.join-discord a:hover .fa-discord {
+.join-discord a:hover {
   color: #7289da;
   filter: drop-shadow(0 0 6px #7289da);
   transform: scale(1.2);
@@ -602,7 +613,7 @@ h1 {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .partners-carousel {
     width: 95vw !important;
     max-width: 98vw !important;
@@ -621,4 +632,43 @@ h1 {
     width: 70px !important;
     height: 70px !important;
   }
+}
+
+
+/* /////////////////////////// */
+/* REGIMENTS */
+/* /////////////////////////// */
+
+.regiment-logo-wrapper {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  border: 3px solid #000000;
+  overflow: hidden;
+}
+
+.regiment-logo-wrapper img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+.regiment-logo-wrapper:hover {
+  box-shadow: 0 0 32px #fff, 0 4px 32px rgba(0,0,0,0.25);
+  transform: scale(1.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.regiment-col {
+  animation: fadeInUp 0.8s;
 }

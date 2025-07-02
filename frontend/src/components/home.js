@@ -14,13 +14,23 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        if (
-          data &&
-          data.data &&
-          data.data.length > 0 &&
-          data.data[0].attributes
-        ) {
-          setPlayers(data.data[0].attributes.players);
+        // Filtre le bon serveur dans la liste
+        const server = data.data.find(
+          (srv) =>
+            srv.attributes &&
+            srv.attributes.ip &&
+            srv.attributes.port &&
+            `${srv.attributes.ip}:${srv.attributes.port}` === SERVER_ID
+        );
+        if (server && server.attributes) {
+          const attr = server.attributes;
+          setPlayers(
+            typeof attr.players === "number"
+              ? attr.players
+              : Array.isArray(attr.players)
+              ? attr.players.length
+              : "N/A"
+          );
         } else {
           setPlayers("N/A");
         }
@@ -29,17 +39,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home-bg"
+    <div
+      className="home-bg"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-    <div className="logo-text">
-      <img src={logoText} alt="Logo texte" />
-    </div>
-    <div className="home-content">
-      <h1>Serveur Roleplay Star Wars Garry’s Mod</h1>
-    </div>
+      <div className="logo-text">
+        <img src={logoText} alt="Logo texte" />
+      </div>
+      <div className="home-content">
+        <h1>Serveur Roleplay Star Wars Garry’s Mod</h1>
+      </div>
       <div className="server-info">
-            <span style={{ fontWeight: "bold" }}>Serveur :</span> {SERVER_ID}
+        <span style={{ fontWeight: "bold" }}>Serveur :</span> {SERVER_ID}
         <FaUser />{" "}
         {players !== null ? players : "0"}
       </div>

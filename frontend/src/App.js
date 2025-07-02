@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from "./components/footer";
 import Home from './components/home';
 import Join from "./components/join";
-import Partners from "./components/Partners"; // <-- Correction ici
+import Partners from "./components/Partners";
+import Regiment from "./components/Regiment";
 
 function App() {
    const [load, updateLoad] = useState(true);
@@ -23,7 +24,8 @@ function App() {
         <Navbar />
         <Home />
         <Join />
-        <Partners /> {/* <-- Correction ici */}
+        <Regiment />
+        <Partners />
         <Footer />
       </div>
   );
