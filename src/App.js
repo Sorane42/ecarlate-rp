@@ -10,6 +10,7 @@ import Regiment from "./components/Regiment";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Reglement from "./pages/Reglement";
 import ReglementButton from "./components/ReglementButton";
+import MentionsLegales from "./pages/MentionsLegales";
 
 function App() {
    const [load, updateLoad] = useState(true);
@@ -41,6 +42,7 @@ function App() {
             }
           />
           <Route path="/reglement" element={<Reglement />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
         </Routes>
       </div>
     </Router>

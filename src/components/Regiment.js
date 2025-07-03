@@ -1,23 +1,29 @@
 import React from "react";
-import logo1 from "../Assets/bataillon_logo.png";
-import logo2 from "../Assets/purge_logo.png";
-import logo3 from "../Assets/starfighter_logo.png";
+import LogoDSO from "../Assets/logo_DSO.png";
+import Logo1LegionAssaut from "../Assets/logo_1LegionAssaut.png";
+import LogoSC from "../Assets/logo_SC.png";
+import LogoForcesSpeciales from "../Assets/logo_Forces_speciales.png";
 
 const regiments = [
   {
-    name: "Bataillon d'assaut",
-    logo: logo1,
-    description: "Description du Bataillon d'assaut.",
+    name: "Département de Sécurité Opérationnelle",
+    logo: LogoDSO,
+    description: "Description du Département de Sécurité Opérationnelle.",
   },
   {
-    name: "Purge Trooper",
-    logo: logo2,
-    description: "Description du Purge Trooper.",
+    name: "1ère Légion d'Assaut",
+    logo: Logo1LegionAssaut,
+    description: "Description de la 1ère Légion d'Assaut.",
   },
   {
     name: "Starfighter Corps",
-    logo: logo3,
+    logo: LogoSC,
     description: "Description du Starfighter Corps.",
+  },
+  {
+    name: "Forces spéciales",
+    logo: LogoForcesSpeciales,
+    description: "Description des Forces spéciales.",
   },
 ];
 
@@ -28,15 +34,43 @@ export default function Regiment() {
         <h1 className="text-center mb-5" style={{ textTransform: "uppercase", color: "#fff" }}>Les régiments</h1>
         <div className="row justify-content-center">
           {regiments.map((reg, idx) => (
-            <div className="col-12 col-md-4 d-flex flex-column align-items-center mb-4 regiment-col" key={idx}>
-              <h3 style={{ fontWeight: "bold", marginBottom: 12, textTransform: "uppercase", color: "#fff" }}>{reg.name}</h3>
-              <div className="regiment-logo-wrapper">
-                <img
-                  src={reg.logo}
-                  alt={reg.name}
-                />
+            <div
+              className="col-12 col-md-6 regiment-col"
+              key={idx}
+              style={{
+                minHeight: 370,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "1rem 0"
+              }}
+            >
+              <h3
+                style={{
+                  fontWeight: "bold",
+                  marginBottom: 4,
+                  textTransform: "uppercase",
+                  color: "#fff",
+                  textAlign: "center",
+                  minHeight: 64
+                }}
+              >
+                {reg.name}
+              </h3>
+              <div className="regiment-logo-wrapper" style={{ margin: "8px 0" }}>
+                <img src={reg.logo} alt={reg.name} />
               </div>
-              <p style={{ textAlign: "center", maxWidth: 320, color: "#fff" }}>{reg.description}</p>
+              <p
+                style={{
+                  textAlign: "center",
+                  maxWidth: 320,
+                  color: "#fff",
+                  minHeight: "48px"
+                }}
+              >
+                {reg.description}
+              </p>
             </div>
           ))}
         </div>
