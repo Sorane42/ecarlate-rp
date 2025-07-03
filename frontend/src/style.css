@@ -526,114 +526,165 @@ h1 {
   animation: fadeInUp 1s;
 }
 
-/* PARTNERS CAROUSEL */
-.partners-main {
-  min-height: auto;
-  height: auto;
+/* /////////////////////////// */
+/* Partners 2 */
+/* /////////////////////////// */
+.partners-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.partner-card-carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  padding: 4rem 0 2rem 0;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 220px;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
 }
 
-.partners-carousel {
+.partner-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  background: #222;
+  box-shadow: 0 0 0 2px #fff;
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s;
+}
+
+.partner-card-carousel:hover .partner-img-wrapper,
+.partner-card-carousel:focus .partner-img-wrapper {
+  box-shadow: 0 0 16px 4px #fff;
+}
+
+.partner-card-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.partner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  opacity: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  border-radius: 24px;
+}
+
+.partner-card-carousel:hover .partner-overlay,
+.partner-card-carousel:focus .partner-overlay {
+  opacity: 1;
+}
+
+.partner-name-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.partner-name-btn .icon {
+  font-size: 1.3rem;
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .partners-slide {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .partner-card-carousel {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .partner-img-wrapper {
+    width: 95vw;
+    max-width: 220px;
+    height: 95vw;
+    max-height: 220px;
+  }
+}
+
+.carousel-indicators {
+  bottom: -40px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  background: #fff;
+  border: 2px solid #222;
+}
+
+.react-multi-carousel-item {
+  height: 350px;
+  width: 320px;
+}
+
+.partner-card-carousel {
   width: 100%;
 }
 
-.partners-arrow {
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
-  cursor: pointer;
-  opacity: 1;
-  transition: opacity 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.partners-arrow:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
+.react-multiple-carousel__arrow{
+  background: none !important;
 }
 
-.partners-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+.react-multiple-carousel__arrow--left{
+  top: 30% !important;
+  left: -15px !important;
+}
+.react-multiple-carousel__arrow--right{
+  top: 30% !important;
+  right: -15px !important;
 }
 
-.partner-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(24,24,27,0.85);
-  border-radius: 32px;
-  padding: 3rem 2rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-  text-decoration: none;
-  color: #fff;
-  width: 350px;
-  min-height: 350px;
-  transition: transform 0.2s;
-  margin-bottom: 1rem;
-}
-.partner-card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+.react-multi-carousel-list {
+  overflow: hidden !important;
 }
 
-.partner-logo {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 2rem;
-}
-
-.partner-name {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .partners-carousel {
-    width: 95vw !important;
-    max-width: 98vw !important;
-    gap: 1rem !important;
+  .react-multiple-carousel__arrow--left{
+    left: 0px !important;
   }
-   .partners-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-  .partner-card {
-    width: 90vw !important;
-    max-width: 220px !important;
-  }
-  .partner-logo {
-    width: 70px !important;
-    height: 70px !important;
+  .react-multiple-carousel__arrow--right{
+    right: 0px !important;
   }
 }
 
+
+@media (min-width: 1024px) {
+  .react-multi-carousel-dot-list {
+    display: none !important;
+  }
+}
 
 /* /////////////////////////// */
 /* REGIMENTS */

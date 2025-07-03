@@ -21,10 +21,10 @@ const Navbar = () => (
           </a>
         </div>
         <ul className="menu-items">
-          <li><a href="#">Rejoindre le serveur</a></li>
-          <li><a href="#">Règlement</a></li>
-          <li><a href="#">Partenaires</a></li>
-          <li><a href="#">Autres</a></li>
+          <li><a href="#serveur">Rejoindre le serveur</a></li>
+          <li><a href="#regiments">Les régiments</a></li>
+          <li><a href="#reglement">Règlement</a></li>
+          <li><a href="#partenaires">Partenaires</a></li>
           <li>
             <a href="https://discord.gg/jbsVZrPkNM" target="_blank" rel="noopener noreferrer">
               <FaDiscord className="social-icon" />
