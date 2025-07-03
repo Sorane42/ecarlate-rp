@@ -39,22 +39,24 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      className="home-bg"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <div className="logo-text">
-        <img src={logoText} alt="Logo texte" />
+    <section id="home">
+      <div
+        className="home-bg"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <div className="logo-text">
+          <img src={logoText} alt="Logo texte" />
+        </div>
+        <div className="home-content">
+          <h1>Serveur Roleplay Star Wars Garry’s Mod</h1>
+        </div>
+        <div className="server-info">
+          <span style={{ fontWeight: "bold" }}>Serveur :</span> {SERVER_ID}
+          <FaUser />{" "}
+          {players !== null ? players : "0"}
+        </div>
       </div>
-      <div className="home-content">
-        <h1>Serveur Roleplay Star Wars Garry’s Mod</h1>
-      </div>
-      <div className="server-info">
-        <span style={{ fontWeight: "bold" }}>Serveur :</span> {SERVER_ID}
-        <FaUser />{" "}
-        {players !== null ? players : "0"}
-      </div>
-    </div>
+    </section>
   );
 };
 
