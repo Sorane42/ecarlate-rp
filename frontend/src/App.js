@@ -7,6 +7,9 @@ import Home from './components/home';
 import Join from "./components/join";
 import Partners from "./components/Partners";
 import Regiment from "./components/Regiment";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Reglement from "./pages/Reglement";
+import ReglementButton from "./components/ReglementButton";
 
 function App() {
    const [load, updateLoad] = useState(true);
@@ -20,14 +23,27 @@ function App() {
   }, []);
 
   return (
+    <Router>
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
-        <Home />
-        <Join />
-        <Regiment />
-        <Partners />
-        <Footer />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <Join />
+                <ReglementButton />
+                <Regiment />
+                <Partners />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/reglement" element={<Reglement />} />
+        </Routes>
       </div>
+    </Router>
   );
 }
 
