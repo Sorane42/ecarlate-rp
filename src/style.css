@@ -270,7 +270,7 @@ h1 {
 
 .logo img {
   margin-top: 1rem;
-  width: 60px !important;
+  width: 80px !important;
   height: auto !important;
 }
 
@@ -373,6 +373,12 @@ h1 {
   padding: 0 32px;
   height: 60px;
   margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    margin-bottom: -80px;
+  }
 }
 
 .footer-logo {
@@ -488,7 +494,6 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
   max-width: 95vw;
   margin: 2em 0;
   gap: 2em;
@@ -751,4 +756,13 @@ h1 {
 .reglement-content li strong {
   display: inline;
   margin-right: 8px;
+}
+
+/* /////////////////////////// */
+/* MENTIONS LEGALES */
+/* /////////////////////////// */
+.mentions-legales{
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
 }
