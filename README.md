@@ -12,8 +12,8 @@ Développé en **React**, ce site a pour objectif de présenter brièvement le s
 
 ## 🧱 Stack technique
 
-- **Frontend** : React (Vite ou Create React App, à adapter)
-- **Styling** : CSS3 / TailwindCSS (à préciser si utilisé)
+- **Frontend** : React
+- **Styling** : CSS3 / Bootstrap
 - **Déploiement** : Vercel
 - **Type** : Site statique / vitrine
 
