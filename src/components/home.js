@@ -52,8 +52,9 @@ const Home = () => {
         </div>
         <div className="server-info">
           <span style={{ fontWeight: "bold" }}>Serveur :</span> {SERVER_ID}
-          <FaUser />{" "}
-          {players !== null ? players : "0"}
+          <div>
+            <FaUser /> {players !== null ? players : "0"}
+          </div>
         </div>
       </div>
     </section>

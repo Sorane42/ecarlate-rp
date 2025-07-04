@@ -35,8 +35,8 @@ const Navbar = () => {
           <ul className="menu-items">
             <li><a href="#home" onClick={handleLinkClick}>Accueil</a></li>
             <li><a href="#serveur" onClick={handleLinkClick}>Rejoindre le serveur</a></li>
-            <li><a href="#regiments" onClick={handleLinkClick}>Les régiments</a></li>
             <li><a href="#reglement" onClick={handleLinkClick}>Règlement</a></li>
+            <li><a href="#regiments" onClick={handleLinkClick}>Les régiments</a></li>
             <li><a href="#partenaires" onClick={handleLinkClick}>Partenaires</a></li>
             <li>
               <a

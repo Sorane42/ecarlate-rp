@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 export default function MentionsLegales() {
   return (
     <div className="mentions-legales">
-        <div className="mentions-content" style={{ maxWidth: 800, margin: "0 auto", color: "#fff", padding: "3rem 1rem",   width: "90vw", maxWidth: "80vw", height: "90vh"}}>
+        <div className="mentions-content" >
         <NavbarReglement />
         <StarBackground />
         <h1 style={{ textAlign: "center", marginBottom: 32, paddingTop: "110px" }}>Mentions légales</h1>

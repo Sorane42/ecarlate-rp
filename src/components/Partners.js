@@ -46,10 +46,10 @@ function PartnersCarousel() {
                   <div className="partner-overlay">{partner.desc}</div>
                 </div>
               </a>
-              <div className="partner-name-btn">
+              {/*<div className="partner-name-btn">
                 <span className="icon"><BsDiscord /></span>
                 {partner.name}
-              </div>
+              </div>*/}
             </div>
           ))}
         </Carousel>
